@@ -16,7 +16,7 @@ if ( process.env.NODE_ENV === 'dev' ) {
 
 } else {
 
-    urlDb = 'mongodb+srv://admin:Am4z0n4s*@cluster0-sjkow.mongodb.net/cafe?retryWrites=true&w=majority';
+    urlDb = process.env.MONGO_URI;
 
 }
 
