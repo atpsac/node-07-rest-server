@@ -17,7 +17,9 @@ app.use( require( './routes/usuario' ) );
 
 // Conexión a base de datos
 
-mongoose.connect('mongodb://localhost:27017/cafe', ( err, res ) => {
+mongoose.connect('mongodb://localhost:27017/cafe',
+                { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true },
+                ( err, res ) => {
     if ( err ) {
         throw err;
     }

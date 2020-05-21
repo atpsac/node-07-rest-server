@@ -29,9 +29,6 @@ app.get('/usuario', (req, res) => {
                     conteo
                 });
             } );
-
-         
-
     } );
 
   });
