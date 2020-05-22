@@ -12,13 +12,13 @@ app.use( bodyParser.urlencoded({ extended: false }) );
 
 app.use( bodyParser.json() );
 
-// requiriendo ruta usuarios
-app.use( require( './routes/usuario' ) );
+// Configuración global de rutas
+app.use( require( './routes/index' ) );
 
 // Conexión a base de datos
 
 mongoose.connect( process.env.URLDB,
-                { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useMongoClient: true },
+                { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true},
                 ( err, res ) => {
     if ( err ) {
         throw err;
